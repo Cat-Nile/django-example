@@ -1,6 +1,11 @@
 from django.db import models
 
 
+
+class Banners(models.Model):
+    img=models.ImageField(upload_to="banners/")
+    alt_text = models.CharField(max_length=150)
+
 class Service(models.Model):
     title = models.CharField(max_length=150)
     detail = models.TextField()
